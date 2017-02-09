@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ServiceFabricPoc.BottleFiller", "ServiceFabricPoc.BottleFiller\ServiceFabricPoc.BottleFiller.sfproj", "{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.BottleFiller.Actors", "ServiceFabricPoc.BottleFiller.Actors\ServiceFabricPoc.BottleFiller.Actors.csproj", "{B3344513-FDCB-457A-B9FA-BA1ABE449501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.BottleFiller.Domain", "ServiceFabricPoc.BottleFiller.Domain\ServiceFabricPoc.BottleFiller.Domain.csproj", "{7351C422-01DB-489E-85B3-B951B9D06A3A}"
+EndProject
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ServiceFabricPoc.WebApi", "ServiceFabricPoc.WebApi\ServiceFabricPoc.WebApi.sfproj", "{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.WebApi.Service", "ServiceFabricPoc.WebApi.Service\ServiceFabricPoc.WebApi.Service.csproj", "{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}.Debug|x64.ActiveCfg = Debug|x64
+		{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}.Debug|x64.Build.0 = Debug|x64
+		{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}.Debug|x64.Deploy.0 = Debug|x64
+		{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}.Release|x64.ActiveCfg = Release|x64
+		{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}.Release|x64.Build.0 = Release|x64
+		{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}.Release|x64.Deploy.0 = Release|x64
+		{B3344513-FDCB-457A-B9FA-BA1ABE449501}.Debug|x64.ActiveCfg = Debug|x64
+		{B3344513-FDCB-457A-B9FA-BA1ABE449501}.Debug|x64.Build.0 = Debug|x64
+		{B3344513-FDCB-457A-B9FA-BA1ABE449501}.Release|x64.ActiveCfg = Release|x64
+		{B3344513-FDCB-457A-B9FA-BA1ABE449501}.Release|x64.Build.0 = Release|x64
+		{7351C422-01DB-489E-85B3-B951B9D06A3A}.Debug|x64.ActiveCfg = Debug|x64
+		{7351C422-01DB-489E-85B3-B951B9D06A3A}.Debug|x64.Build.0 = Debug|x64
+		{7351C422-01DB-489E-85B3-B951B9D06A3A}.Release|x64.ActiveCfg = Release|x64
+		{7351C422-01DB-489E-85B3-B951B9D06A3A}.Release|x64.Build.0 = Release|x64
+		{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}.Debug|x64.ActiveCfg = Debug|x64
+		{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}.Debug|x64.Build.0 = Debug|x64
+		{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}.Debug|x64.Deploy.0 = Debug|x64
+		{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}.Release|x64.ActiveCfg = Release|x64
+		{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}.Release|x64.Build.0 = Release|x64
+		{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}.Release|x64.Deploy.0 = Release|x64
+		{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}.Debug|x64.ActiveCfg = Debug|x64
+		{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}.Debug|x64.Build.0 = Debug|x64
+		{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}.Release|x64.ActiveCfg = Release|x64
+		{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
