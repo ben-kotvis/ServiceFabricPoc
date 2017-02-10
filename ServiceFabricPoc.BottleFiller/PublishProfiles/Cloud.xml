@@ -20,6 +20,6 @@
                                     AzureActiveDirectory="true"
                                     ServerCertThumbprint="0123456789012345678901234567890123456789" />
   -->
-  <ClusterConnectionParameters ConnectionEndpoint="webreferenceapp.northcentralus.cloudapp.azure.com:19000" X509Credential="true" ServerCertThumbprint="95624E2980C64A441F58815D1C57A26A0745E93E" FindType="FindByThumbprint" FindValue="95624E2980C64A441F58815D1C57A26A0745E93E" StoreLocation="CurrentUser" StoreName="My" />
+  <ClusterConnectionParameters ConnectionEndpoint="elkaysfcluster.northcentralus.cloudapp.azure.com:19000" />
   <ApplicationParameterFile Path="..\ApplicationParameters\Cloud.xml" />
 </PublishProfile>

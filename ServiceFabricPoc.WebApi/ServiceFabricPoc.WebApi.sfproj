@@ -29,6 +29,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ServiceFabricPoc.CustomerInformationService\ServiceFabricPoc.CustomerInformationService.csproj" />
     <ProjectReference Include="..\ServiceFabricPoc.WebApi.Service\ServiceFabricPoc.WebApi.Service.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
