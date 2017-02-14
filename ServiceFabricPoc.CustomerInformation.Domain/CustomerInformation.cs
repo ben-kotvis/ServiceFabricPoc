@@ -11,6 +11,9 @@ namespace ServiceFabricPoc.CustomerInformation.Domain
     public class CustomerInformation
     {
         [DataMember]
+        public string Id { get; set; }
+
+        [DataMember]
         public List<CustomerBottleFiller> BottleFillers { get; set; }
 
         [DataMember]

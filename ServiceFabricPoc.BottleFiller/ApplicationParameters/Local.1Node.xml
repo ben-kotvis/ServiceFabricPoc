@@ -4,5 +4,8 @@
     <Parameter Name="BottleFillerActorService_PartitionCount" Value="1" />
     <Parameter Name="BottleFillerActorService_TargetReplicaSetSize" Value="1" />
     <Parameter Name="BottleFillerActorService_MinReplicaSetSize" Value="1" />
+    <Parameter Name="EventWriterActorService_PartitionCount" Value="1" />
+    <Parameter Name="EventWriterActorService_TargetReplicaSetSize" Value="1" />
+    <Parameter Name="EventWriterActorService_MinReplicaSetSize" Value="1" />
   </Parameters>
 </Application>

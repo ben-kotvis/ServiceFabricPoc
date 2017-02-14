@@ -4,10 +4,16 @@
     <Parameter Name="BottleFillerActorService_PartitionCount" DefaultValue="10" />
     <Parameter Name="BottleFillerActorService_MinReplicaSetSize" DefaultValue="3" />
     <Parameter Name="BottleFillerActorService_TargetReplicaSetSize" DefaultValue="3" />
+    <Parameter Name="EventWriterActorService_PartitionCount" DefaultValue="10" />
+    <Parameter Name="EventWriterActorService_MinReplicaSetSize" DefaultValue="1" />
+    <Parameter Name="EventWriterActorService_TargetReplicaSetSize" DefaultValue="1" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
+  <ServiceManifestImport>
+    <ServiceManifestRef ServiceManifestName="ServiceFabricPoc.EventWriter.ActorsPkg" ServiceManifestVersion="1.0.0" />
+  </ServiceManifestImport>
   <ServiceManifestImport>
     <ServiceManifestRef ServiceManifestName="ServiceFabricPoc.BottleFiller.ActorsPkg" ServiceManifestVersion="1.0.0" />
   </ServiceManifestImport>
@@ -15,6 +21,11 @@
     <Service Name="BottleFillerActorService" GeneratedIdRef="c5579ffd-1426-4cf8-bcdd-96cf5163ae07|Persisted">
       <StatefulService ServiceTypeName="BottleFillerActorServiceType" TargetReplicaSetSize="[BottleFillerActorService_TargetReplicaSetSize]" MinReplicaSetSize="[BottleFillerActorService_MinReplicaSetSize]">
         <UniformInt64Partition PartitionCount="[BottleFillerActorService_PartitionCount]" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
+      </StatefulService>
+    </Service>
+    <Service Name="EventWriterActorService" GeneratedIdRef="133F7A1D-2967-4C3C-8F76-9AF0BC33519C|None">
+      <StatefulService ServiceTypeName="EventWriterActorServiceType" TargetReplicaSetSize="3" MinReplicaSetSize="2">
+        <UniformInt64Partition PartitionCount="3" LowKey="-9223372036854775808" HighKey="9223372036854775807" />
       </StatefulService>
     </Service>
     <!-- The section below creates instances of service types, when an instance of this 

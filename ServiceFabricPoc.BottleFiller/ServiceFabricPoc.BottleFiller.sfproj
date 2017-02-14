@@ -30,6 +30,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServiceFabricPoc.BottleFiller.Actors\ServiceFabricPoc.BottleFiller.Actors.csproj" />
+    <ProjectReference Include="..\ServiceFabricPoc.EventWriter.Actors\ServiceFabricPoc.EventWriter.Actors.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>

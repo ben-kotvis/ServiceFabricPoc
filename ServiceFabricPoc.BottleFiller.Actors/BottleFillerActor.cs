@@ -7,6 +7,7 @@ using Microsoft.ServiceFabric.Actors;
 using Microsoft.ServiceFabric.Actors.Runtime;
 using Microsoft.ServiceFabric.Actors.Client;
 using ServiceFabricPoc.BottleFiller.Domain;
+using ServiceFabricPoc.EventWriter.Actors.Domain;
 
 namespace ServiceFabricPoc.BottleFiller.Actors
 {
@@ -24,6 +25,7 @@ namespace ServiceFabricPoc.BottleFiller.Actors
 
         private const string BottleFillerStatusPropertyName = "BottleFillerStatus";
         private const string BottleFillerStatisticsPropertyName = "BottleFillerStatistics";
+        private const string BottleFillerStatisticsHoldingPropertyName = "BottleFillerStatisticsHolding";
 
         /// <summary>
         /// Initializes a new instance of Actor
@@ -59,9 +61,38 @@ namespace ServiceFabricPoc.BottleFiller.Actors
         public async Task AddUsage(AddUsageMessage message)
         {
             var currentStatistics = await this.StateManager.GetStateAsync<BottleFillerStatistics>(BottleFillerStatisticsPropertyName);
+            
             currentStatistics.TotalGallons += message.NumberOfGallons;
             currentStatistics.CurrentFilterGallonsUsed += message.NumberOfGallons;
-            await this.StateManager.SetStateAsync<BottleFillerStatistics>(BottleFillerStatisticsPropertyName, currentStatistics);
+            await this.StateManager.SetStateAsync(BottleFillerStatisticsPropertyName, currentStatistics);
+
+            try
+            {
+
+                string applicationInstance = "ServiceFabricPoc.BottleFiller";
+
+                var serviceUri = new Uri("fabric:/" + applicationInstance + "/EventWriterActorService");
+                IEventWriterActor bottleFiller = ActorProxy.Create<IEventWriterActor>(new ActorId(Guid.NewGuid()), serviceUri);
+
+                var eventMessage = new UsageAddedEventMessage()
+                {
+                    ActorId = this.Id.ToString(),
+                    EventTime = DateTimeOffset.UtcNow,
+                    NumberOfGallons = message.NumberOfGallons
+                };
+
+                await bottleFiller.Write(eventMessage, "usageaddedeventstream");
+            }
+            catch(Exception ex)
+            {
+                currentStatistics.TotalGallons -= message.NumberOfGallons;
+                currentStatistics.CurrentFilterGallonsUsed -= message.NumberOfGallons;
+
+                await this.StateManager.SetStateAsync<BottleFillerStatistics>(BottleFillerStatisticsPropertyName, currentStatistics);
+
+                throw;
+            }
+
         }
 
         public async Task<BottleFillerStatistics> OnBoard(OnBoardMessage message)

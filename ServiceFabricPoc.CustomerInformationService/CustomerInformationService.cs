@@ -8,6 +8,7 @@ using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
 using Domain = ServiceFabricPoc.CustomerInformation.Domain;
+using Microsoft.ServiceFabric.Data;
 
 namespace ServiceFabricPoc.CustomerInformationService
 {
@@ -16,6 +17,8 @@ namespace ServiceFabricPoc.CustomerInformationService
     /// </summary>
     internal sealed class CustomerInformationService : StatefulService
     {
+        private const string CustomerInformationDictionary = "CustomerInformationDictionary";
+
         public CustomerInformationService(StatefulServiceContext context)
             : base(context)
         { }
@@ -68,35 +71,49 @@ namespace ServiceFabricPoc.CustomerInformationService
         
         public async Task<IEnumerable<Domain.CustomerInformation>> GetCustomerInformationAsync(CancellationToken ct)
         {
-
             IList<Domain.CustomerInformation> results = new List<Domain.CustomerInformation>();
-            /*
-            IReliableDictionary<InventoryItemId, InventoryItem> inventoryItems =
-                await this.StateManager.GetOrAddAsync<IReliableDictionary<InventoryItemId, InventoryItem>>(InventoryItemDictionaryName);
+            
+            IReliableDictionary<string, Domain.CustomerInformation> customers =
+                await this.StateManager.GetOrAddAsync<IReliableDictionary<string, Domain.CustomerInformation>>(CustomerInformationDictionary);
 
-            ServiceEventSource.Current.Message("Called GetCustomerInventory to return InventoryItemView");
-
-            await this.PrintInventoryItemsAsync(inventoryItems, ct);
-
+            ServiceEventSource.Current.Message("Called CustomerInformationDictionary to return CustomerInformation");            
 
             using (ITransaction tx = this.StateManager.CreateTransaction())
             {
-                ServiceEventSource.Current.Message("Generating item views for {0} items", await inventoryItems.GetCountAsync(tx));
+                ServiceEventSource.Current.Message("Generating item views for {0} items", await customers.GetCountAsync(tx));
 
-                IAsyncEnumerator<KeyValuePair<InventoryItemId, InventoryItem>> enumerator =
-                    (await inventoryItems.CreateEnumerableAsync(tx)).GetAsyncEnumerator();
+                IAsyncEnumerator<KeyValuePair<string, Domain.CustomerInformation>> enumerator =
+                    (await customers.CreateEnumerableAsync(tx)).GetAsyncEnumerator();
 
                 while (await enumerator.MoveNextAsync(ct))
                 {
-                    if (enumerator.Current.Value.AvailableStock > 0)
-                    {
-                        results.Add(enumerator.Current.Value);
-                    }
+                    results.Add(enumerator.Current.Value);
                 }
             }
 
-            */
+            
             return results;
         }
+
+
+        /// <summary>
+        /// Used internally to generate inventory items and adds them to the ReliableDict we have.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public async Task<bool> CreateInventoryItemAsync(Domain.CustomerInformation item)
+        {
+            IReliableDictionary<string, Domain.CustomerInformation> inventoryItems =
+                await this.StateManager.GetOrAddAsync<IReliableDictionary<string, Domain.CustomerInformation>>(CustomerInformationDictionary);
+
+            using (ITransaction tx = this.StateManager.CreateTransaction())
+            {
+                await inventoryItems.AddAsync(tx, item.Id, item);
+                await tx.CommitAsync();
+            }
+
+            return true;
+        }
+
     }
 }
