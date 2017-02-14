@@ -7,8 +7,8 @@
     <ProjectGuid>{35207CB4-20CB-4D9B-8C28-BF413B6D985C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceFabricPoc.EventWriter.Actors</RootNamespace>
-    <AssemblyName>ServiceFabricPoc.EventWriter.Actors</AssemblyName>
+    <RootNamespace>ASF.BottleFiller.EventWriter.Actors</RootNamespace>
+    <AssemblyName>ASF.BottleFiller.EventWriter.Actors</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -121,9 +121,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServiceFabricPoc.EventWriter.Actors.Domain\ServiceFabricPoc.EventWriter.Actors.Domain.csproj">
+    <ProjectReference Include="..\ASF.BottleFiller.EventWriter.Actors.Domain\ASF.BottleFiller.EventWriter.Actors.Domain.csproj">
       <Project>{3FFDF7DE-995E-464E-9BB2-03316D52770B}</Project>
-      <Name>ServiceFabricPoc.EventWriter.Actors.Domain</Name>
+      <Name>ASF.BottleFiller.EventWriter.Actors.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

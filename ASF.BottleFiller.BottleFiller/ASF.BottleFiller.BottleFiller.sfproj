@@ -2,7 +2,7 @@
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.4.0\build\Microsoft.VisualStudio.Azure.Fabric.Application.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Fabric.MSBuild.1.4.0\build\Microsoft.VisualStudio.Azure.Fabric.Application.props')" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>a7d5ee5b-fa7b-4be1-9456-429d07a0df24</ProjectGuid>
+    <ProjectGuid>fdbc85e3-bba3-4fc5-a7d8-0ce02eb5bb4a</ProjectGuid>
     <ProjectVersion>1.4</ProjectVersion>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
@@ -29,8 +29,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServiceFabricPoc.CustomerInformationService\ServiceFabricPoc.CustomerInformationService.csproj" />
-    <ProjectReference Include="..\ServiceFabricPoc.WebApi.Service\ServiceFabricPoc.WebApi.Service.csproj" />
+    <ProjectReference Include="..\ASF.BottleFiller.BottleFiller.Actors\ASF.BottleFiller.BottleFiller.Actors.csproj" />
+    <ProjectReference Include="..\ASF.BottleFiller.EventWriter.Actors\ASF.BottleFiller.EventWriter.Actors.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <PropertyGroup>

@@ -12,10 +12,10 @@
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="ServiceFabricPoc.EventWriter.ActorsPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="ASF.BottleFiller.BottleFiller.ActorsPkg" ServiceManifestVersion="1.0.0" />
   </ServiceManifestImport>
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="ServiceFabricPoc.BottleFiller.ActorsPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="ASF.BottleFiller.EventWriter.ActorsPkg" ServiceManifestVersion="1.0.0" />
   </ServiceManifestImport>
   <DefaultServices>
     <Service Name="BottleFillerActorService" GeneratedIdRef="c5579ffd-1426-4cf8-bcdd-96cf5163ae07|Persisted">

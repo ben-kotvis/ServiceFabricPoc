@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ServiceFabricPoc.BottleFiller", "ServiceFabricPoc.BottleFiller\ServiceFabricPoc.BottleFiller.sfproj", "{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}"
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ASF.BottleFiller.BottleFiller", "ASF.BottleFiller.BottleFiller\ASF.BottleFiller.BottleFiller.sfproj", "{FDBC85E3-BBA3-4FC5-A7D8-0CE02EB5BB4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.BottleFiller.Actors", "ServiceFabricPoc.BottleFiller.Actors\ServiceFabricPoc.BottleFiller.Actors.csproj", "{B3344513-FDCB-457A-B9FA-BA1ABE449501}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.BottleFiller.Actors", "ASF.BottleFiller.BottleFiller.Actors\ASF.BottleFiller.BottleFiller.Actors.csproj", "{B3344513-FDCB-457A-B9FA-BA1ABE449501}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.BottleFiller.Domain", "ServiceFabricPoc.BottleFiller.Domain\ServiceFabricPoc.BottleFiller.Domain.csproj", "{7351C422-01DB-489E-85B3-B951B9D06A3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.BottleFiller.Domain", "ASF.BottleFiller.BottleFiller.Domain\ASF.BottleFiller.BottleFiller.Domain.csproj", "{7351C422-01DB-489E-85B3-B951B9D06A3A}"
 EndProject
-Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ServiceFabricPoc.WebApi", "ServiceFabricPoc.WebApi\ServiceFabricPoc.WebApi.sfproj", "{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}"
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "ASF.BottleFiller.WebApi", "ASF.BottleFiller.WebApi\ASF.BottleFiller.WebApi.sfproj", "{A7D5EE5B-FA7B-4BE1-9456-429D07A0DF24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.WebApi.Service", "ServiceFabricPoc.WebApi.Service\ServiceFabricPoc.WebApi.Service.csproj", "{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.WebApi.Service", "ASF.BottleFiller.WebApi.Service\ASF.BottleFiller.WebApi.Service.csproj", "{02F2FB7C-9580-4E8B-8CC9-76A918CE03E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.CustomerInformationService", "ServiceFabricPoc.CustomerInformationService\ServiceFabricPoc.CustomerInformationService.csproj", "{3CEB0E1E-7A93-4EA0-B050-4172BC862148}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.CustomerInformationService", "ASF.BottleFiller.CustomerInformationService\ASF.BottleFiller.CustomerInformationService.csproj", "{3CEB0E1E-7A93-4EA0-B050-4172BC862148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.CustomerInformation.Domain", "ServiceFabricPoc.CustomerInformation.Domain\ServiceFabricPoc.CustomerInformation.Domain.csproj", "{AA24FC5B-1AA1-4518-A446-E9AECE3C3800}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.CustomerInformation.Domain", "ASF.BottleFiller.CustomerInformation.Domain\ASF.BottleFiller.CustomerInformation.Domain.csproj", "{AA24FC5B-1AA1-4518-A446-E9AECE3C3800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.EventWriter.Actors", "ServiceFabricPoc.EventWriter.Actors\ServiceFabricPoc.EventWriter.Actors.csproj", "{35207CB4-20CB-4D9B-8C28-BF413B6D985C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.EventWriter.Actors", "ASF.BottleFiller.EventWriter.Actors\ASF.BottleFiller.EventWriter.Actors.csproj", "{35207CB4-20CB-4D9B-8C28-BF413B6D985C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.EventWriter.Actors.Domain", "ServiceFabricPoc.EventWriter.Actors.Domain\ServiceFabricPoc.EventWriter.Actors.Domain.csproj", "{3FFDF7DE-995E-464E-9BB2-03316D52770B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASF.BottleFiller.EventWriter.Actors.Domain", "ASF.BottleFiller.EventWriter.Actors.Domain\ASF.BottleFiller.EventWriter.Actors.Domain.csproj", "{3FFDF7DE-995E-464E-9BB2-03316D52770B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
