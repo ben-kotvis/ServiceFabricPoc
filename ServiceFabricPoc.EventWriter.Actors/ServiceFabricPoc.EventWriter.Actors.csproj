@@ -121,7 +121,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ServiceFabricPoc.EventWriter.Actors.Interfaces\ServiceFabricPoc.EventWriter.Actors.Domain.csproj">
+    <ProjectReference Include="..\ServiceFabricPoc.EventWriter.Actors.Domain\ServiceFabricPoc.EventWriter.Actors.Domain.csproj">
       <Project>{3FFDF7DE-995E-464E-9BB2-03316D52770B}</Project>
       <Name>ServiceFabricPoc.EventWriter.Actors.Domain</Name>
     </ProjectReference>

@@ -100,7 +100,7 @@
       <Project>{7351C422-01DB-489E-85B3-B951B9D06A3A}</Project>
       <Name>ServiceFabricPoc.BottleFiller.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServiceFabricPoc.EventWriter.Actors.Interfaces\ServiceFabricPoc.EventWriter.Actors.Domain.csproj">
+    <ProjectReference Include="..\ServiceFabricPoc.EventWriter.Actors.Domain\ServiceFabricPoc.EventWriter.Actors.Domain.csproj">
       <Project>{3ffdf7de-995e-464e-9bb2-03316d52770b}</Project>
       <Name>ServiceFabricPoc.EventWriter.Actors.Domain</Name>
     </ProjectReference>

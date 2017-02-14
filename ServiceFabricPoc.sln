@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.CustomerIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.EventWriter.Actors", "ServiceFabricPoc.EventWriter.Actors\ServiceFabricPoc.EventWriter.Actors.csproj", "{35207CB4-20CB-4D9B-8C28-BF413B6D985C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.EventWriter.Actors.Domain", "ServiceFabricPoc.EventWriter.Actors.Interfaces\ServiceFabricPoc.EventWriter.Actors.Domain.csproj", "{3FFDF7DE-995E-464E-9BB2-03316D52770B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceFabricPoc.EventWriter.Actors.Domain", "ServiceFabricPoc.EventWriter.Actors.Domain\ServiceFabricPoc.EventWriter.Actors.Domain.csproj", "{3FFDF7DE-995E-464E-9BB2-03316D52770B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
